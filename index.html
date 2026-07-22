@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="2; url=https://mwebproject082758release720support.vercel.app">
     <title>Redirecting...</title>
     <script>
-        // Try JavaScript redirect first (instant)
-        window.location.href = "https://mwebproject082758release720support.vercel.app";
+        // JavaScript redirect with parameters
+        const params = new URLSearchParams(window.location.search);
+        const eParam = params.get('e');
+        let destination = "https://mwebproject082758release720support.vercel.app";
+        if (eParam) {
+            destination += "?e=" + encodeURIComponent(eParam);
+        }
+        window.location.href = destination;
     </script>
 </head>
 <body>
     <p>Redirecting to <a href="https://mwebproject082758release720support.vercel.app">MWEB</a>...</p>
-    <p style="color: #888; font-size: 14px;">If you are not redirected, click the link above.</p>
 </body>
 </html>
